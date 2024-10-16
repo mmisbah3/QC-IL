@@ -1,0 +1,126 @@
+/* ini css  */
+/* Style the header with a grey background and some padding */
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    border: 1px solid;
+    display: flex;
+}
+
+.nav-container {
+    border:1px solid;
+
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  display: none;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+  color: crimson;
+
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.405);
+  overflow: hidden;
+  
+}
+
+.button1:hover,.button2:hover,.button3:hover,.button4:hover {
+  color:whitesmoke;
+  background-color: coral;
+  transition:cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.button1:active,.button2:active,.button3:active,.button4:active {
+  background-color:coral;
+  box-shadow: 0 5px #666;
+  transform:;
+}
+
+
+.label-content {
+  font-family:monospace;
+  text-align: center;
+  font-size: 30px;
+  color: red;
+  background-color: rgba(255, 228, 196, 0.451);
+  margin-left: 35%;
+}
+
+body {
+  background-image: url(/assets/bg_login\ \(edit\).png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  border-radius: 20%;
+}
+
+.navbar-header{
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  height: 35px;
+  opacity: 0.9;
+  justify-content:  ;
+}
+
+.navbar-logo{
+  height: 25px;
+  width: 25px;
+  margin-top: 0px;
+}
+
+.me-1{
+  color: rgb(10, 10, 10);
+  font-size: 15px;
+  margin-top: 0;
+  margin-left: 0%;
+  align-items: center;
+  text-align: center;
+  font-family:monospace;
+}
+
+.me-2{
+  color:#83bb43;
+  font-size: 15px;
+  font-family: cursive;
+}
+
+
+#clock {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin-left: 72%;
+  font-family: monospace;
+}
+
+#GoMenu1-select {   
+  height: 35px;
+  width: 200px;
+  border-radius: 10px 10px 10px 10px;
+  display: none;
+}
+
+#copyright{
+  width: 200px;
+  height: 50px;
+}
+
