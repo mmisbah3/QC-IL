@@ -1,0 +1,98 @@
+/* ini css  */
+/* Style the header with a grey background and some padding */
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    border: 1px solid;
+    display: flex;
+}
+
+.nav-container {
+    border:1px solid;
+
+}
+
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.405);
+  overflow: hidden;
+  
+}
+
+.label-content {
+  font-family:monospace;
+  text-align: center;
+  font-size: 30px;
+  color: red;
+  background-color: rgba(255, 228, 196, 0.451);
+  margin-left: 35%;
+}
+
+body {
+  background-image: url(/assets/bg_login\ \(edit\).png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  border-radius: 20%;
+}
+
+.navbar-header{
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  height: 35px;
+  opacity: 0.9;
+  justify-content:  ;
+}
+
+.navbar-logo{
+  height: 25px;
+  width: 25px;
+  margin-top: 0px;
+}
+
+.me-1{
+  color: rgb(10, 10, 10);
+  font-size: 15px;
+  margin-top: 0;
+  margin-left: 0%;
+  align-items: center;
+  text-align: center;
+  font-family:monospace;
+}
+
+.me-2{
+  color:#83bb43;
+  font-size: 15px;
+  font-family: cursive;
+}
+
+
+#clock {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin-left: 72%;
+  font-family: monospace;
+}
+
+.button{
+  width: 170px;
+  height: 65px;
+  cursor: pointer;
+  background-color: yellow;
+  border-radius: 10%;
+  outline: none;
+  transform-origin: 0 0;
+}
+
+#copyright{
+  width: 200px;
+  height: 50px;
+}
+
