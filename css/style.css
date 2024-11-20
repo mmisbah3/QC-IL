@@ -55,6 +55,18 @@ body {
   outline: none;
 }
 
+.button2 {
+    width: 200px;
+    height: 65px;
+    margin-right:20px;
+    margin-top:10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color:aliceblue;
+    border-radius: 10%;
+    outline: none;
+  }
+
 .button1:hover,.button2:hover,.button3:hover,.button4:hover {
     color:whitesmoke;
     background-color: coral;
