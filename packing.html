@@ -7,10 +7,66 @@
     <title>All Data InLine Packing</title>
     <link href="assets/favicon.ico" rel="icon">
     <link rel="stylesheet" href="css/style.css">
+    <link href="css/Untitled1.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/wb.panel.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+        $("#PanelMenu1").panel({animate: true, animationDuration: 200, animationEasing: 'linear', dismissible: true, display: 'push', position: 'left', toggle: true});
+        });
+    </script>
 </head>
-<body>
+<body style="background-image: url(assets/bg.jpg);background-size: cover;">
+    <div id="datetime" style="position: absolute;top:-380px"></div>
+    <script src="js/clock.js"></script>
+
+    <div id="wb_PanelMenu1" style="position:absolute;left:8px;top:-380px;width:42px;height:40px;text-align:center;z-index:0;">
+        <a href="#PanelMenu1_markup" id="PanelMenu1">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        </a>
+        <div id="PanelMenu1_markup">
+        <ul role="menu">
+        <li role="menuitem"><a href="inline.html" class="nav-link"><svg class="icon" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg">
+           <path d="M33 0 L20 0 L33 0 L17 0 C16 0, 15 0, 14 1 C14 2, 13 2, 13 3 C13 4, 14 5, 14 6 C15 6, 16 7, 17 7 L17 20 L17 20 C17 21, 16 22, 16 23 L5 41 L5 41 C4 43, 4 44, 4 45 C4 47, 4 49, 6 50 C7 51, 9 52, 11 52 L42 52 L42 52 C44 52, 46 51, 47 50 C48 49, 49 47, 49 45 C49 44, 49 43, 48 41 L37 23 L37 23 C36 22, 36 21, 36 20 L36 7 L36 7 C37 7, 38 6, 38 6 C39 5, 39 4, 39 3 C39 2, 39 2, 38 1 C38 0, 37 0, 36 0 L33 0Z  M23 20 L23 7 L23 20 L23 7 L30 7 L30 7 L30 20 L30 20 C30 23, 30 25, 32 27 L35 33 L35 33 L18 33 L18 33 L21 27 L21 27 C23 25, 23 23, 23 20"/>
+        </svg>
+        <span>QC INLINE</span></a></li>
+        <li role="menuitem"><a href="packing.html" class="nav-link"><svg class="icon" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg">
+           <path d="M16 3 C16 2, 16 2, 17 1 L17 1 L17 1 C17 0, 18 0, 19 0 L22 0 L22 0 C23 0, 24 0, 25 1 C25 2, 26 2, 26 3 C27 3, 27 4, 28 4 C29 5, 29 6, 29 7 L29 29 L29 29 C29 30, 29 31, 28 32 C27 32, 27 33, 26 33 C26 34, 25 34, 25 35 C24 36, 23 36, 22 36 L19 36 L19 36 C18 36, 17 36, 17 35 C16 34, 16 34, 16 33 C15 33, 14 32, 14 32 C13 31, 13 30, 13 29 L13 7 L13 7 C13 6, 13 5, 14 4 C14 4, 15 3, 16 3 Z M3 46 L32 46 L3 46 L32 46 C36 46, 39 44, 41 42 C44 39, 45 36, 45 33 C45 29, 44 26, 41 23 C39 21, 36 20, 32 20 L32 13 L32 13 C38 13, 42 15, 46 19 C50 22, 52 27, 52 33 C52 38, 50 42, 47 46 L48 46 L48 46 C49 46, 50 46, 51 47 C51 47, 52 48, 52 49 C52 50, 51 51, 51 51 C50 52, 49 52, 48 52 L32 52 L3 52 C2 52, 1 52, 1 51 C0 51, 0 50, 0 49 C0 48, 0 47, 1 47 C1 46, 2 46, 3 46 Z M11 39 L31 39 L11 39 L31 39 C32 39, 32 40, 32 41 C32 42, 32 42, 31 42 L11 42 L11 42 C10 42, 9 42, 9 41 C9 40, 10 39, 11 39"/>
+        </svg>
+        <span>QC PACKING</span></a></li>
+        <li role="menuitem"><a href="https://docs.google.com/spreadsheets/d/10sfpAZwuC_cH3BQH8XbUbV5VahLSS5kn/edit?usp=drive_link&ouid=114061069227598456740&rtpof=true&sd=true" target="_blank" class="nav-link"><svg class="icon" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg">
+           <path d="M3 0 C1 0, 0 1, -1 2 L-1 2 L-1 2 C-3 3, -3 5, -3 7 L-3 46 L-3 46 C-3 47, -3 49, -1 50 C0 51, 1 52, 3 52 L29 52 L29 52 C31 52, 33 51, 34 50 C35 49, 36 47, 36 46 L36 44 L36 44 C35 44, 35 44, 35 44 L29 45 L29 45 C28 45, 28 46, 28 46 C28 46, 28 46, 28 46 L21 46 L21 46 C20 46, 20 45, 20 45 L19 43 L19 43 C18 43, 18 42, 18 42 C17 42, 17 43, 17 43 L16 45 L16 45 C16 45, 15 46, 14 46 C14 46, 13 45, 13 45 L11 39 L11 39 L10 42 L10 42 C10 44, 8 45, 6 46 L5 46 L5 46 C4 46, 3 45, 3 44 C3 43, 4 42, 5 42 L6 42 L6 42 C6 42, 7 42, 7 41 L9 36 L9 36 C9 35, 10 34, 11 34 C13 34, 13 35, 14 36 L15 40 L15 40 C16 39, 17 39, 18 39 C19 39, 21 40, 22 41 L22 42 L22 42 L23 42 L23 42 C23 41, 23 41, 23 40 L24 33 L24 33 C25 32, 25 31, 26 30 L36 21 L36 21 L36 16 L36 16 L23 16 L23 16 C22 16, 21 16, 20 15 C20 15, 19 14, 19 13 L19 0 L19 0 L3 0Z  M23 0 L23 13 L23 0 L23 13 L36 13 L36 13 L23 0Z  M53 14 C52 14, 51 13, 50 13 L50 13 L50 13 C49 13, 48 14, 47 14 L44 17 L44 17 L51 24 L51 24 L54 22 L54 22 C55 21, 55 20, 55 19 C55 18, 55 17, 54 16 L53 14Z  M28 33 C28 33, 28 34, 28 34 L26 40 L26 40 C26 41, 26 41, 26 42 C27 42, 27 42, 28 42 L34 41 L34 41 C35 41, 35 40, 36 40 L49 27 L49 27 L41 20 L41 20 L28 33Z "/>
+        </svg>
+        <span>Jadwal Produksi</span></a></li>
+        <li role="menuitem"><a href="https://docs.google.com/spreadsheets/d/1flsYs7962sXu1qVsDDNioEILUagIscEWFfkXOwuquA0/edit?gid=1205767417#gid=1205767417" target="_blank" class="nav-link"><svg class="icon" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg">
+           <path d="M13 0 C11 0, 10 1, 9 2 L9 2 L9 2 C7 3, 7 5, 7 7 L7 46 L7 46 C7 47, 7 49, 9 50 C10 51, 11 52, 13 52 L39 52 L39 52 C41 52, 43 51, 44 50 C45 49, 46 47, 46 46 L46 16 L46 16 L33 16 L33 16 C32 16, 31 16, 30 15 C30 15, 29 14, 29 13 L29 0 L29 0 L13 0Z  M33 0 L33 13 L33 0 L33 13 L46 13 L46 13 L33 0Z  M18 26 L34 26 L18 26 L34 26 C35 26, 36 27, 36 28 C36 29, 35 29, 34 29 L18 29 L18 29 C17 29, 16 29, 16 28 C16 27, 17 26, 18 26 Z M18 33 L34 33 L18 33 L34 33 C35 33, 36 33, 36 34 C36 35, 35 36, 34 36 L18 36 L18 36 C17 36, 16 35, 16 34 C16 33, 17 33, 18 33 Z M18 39 L34 39 L18 39 L34 39 C35 39, 36 40, 36 41 C36 42, 35 42, 34 42 L18 42 L18 42 C17 42, 16 42, 16 41 C16 40, 17 39, 18 39"/>
+        </svg>
+        <span>Absen</span></a></li>
+        <li role="menuitem"><a href="https://onekn-my.sharepoint.com/:f:/g/personal/septian_priatna_kalbenutritionals_com/EgP8VovnCZhHn_MKN-NY0zABkpuE5GXR9wlvUpPPhqQpHg" target="_blank" class="nav-link"><svg class="icon" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg">
+           <path d="M3 0 C1 0, 0 1, -1 2 L-1 2 L-1 2 C-3 3, -3 5, -3 7 L-3 36 L-3 36 C-3 38, -3 39, -1 40 C0 42, 1 42, 3 42 L21 42 L21 42 L20 46 L20 46 L13 46 L13 46 C12 46, 11 46, 11 47 C10 47, 10 48, 10 49 C10 50, 10 51, 11 51 C11 52, 12 52, 13 52 L39 52 L39 52 C40 52, 41 52, 41 51 C42 51, 42 50, 42 49 C42 48, 42 47, 41 47 C41 46, 40 46, 39 46 L32 46 L32 46 L31 42 L31 42 L49 42 L49 42 C50 42, 52 42, 53 40 C54 39, 55 38, 55 36 L55 7 L55 7 C55 5, 54 3, 53 2 C52 1, 50 0, 49 0 L3 0Z  M49 7 L49 36 L49 7 L49 36 L3 36 L3 36 L3 7 L3 7 L49 7Z "/>
+        </svg>
+        <span>OneDrive</span></a></li>
+        <li role="menuitem"><a href="https://drive.google.com/drive/folders/1D0OuaG50_AYmqJZ1q9acArde4B_YhEo0" target="_blank" class="nav-link"><svg class="icon" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg">
+           <path d="M34 32 L17 3 L34 32 L17 3 L34 3 L34 3 L50 32 L50 32 L34 32Z  M20 35 L12 49 L20 35 L12 49 L43 49 L43 49 L52 35 L52 35 L20 35Z  M15 7 L0 35 L15 7 L0 35 L8 49 L8 49 L24 21 L24 21 L15 7Z "/>
+        </svg>
+        <span>Google Drive</span></a></li>
+        <li role="menuitem"><a href="http://10.175.11.56/sso/e-okp/auth/login" target="_blank" class="nav-link"><svg class="icon" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg">
+           <path d="M6 8 C6 7, 7 6, 8 5 L8 5 L8 5 C9 4, 10 3, 11 3 L41 3 L41 3 C42 3, 43 4, 44 5 C45 6, 45 7, 45 8 L45 39 L45 39 L6 39 L6 39 L6 8Z  M38 13 C37 12, 36 12, 35 13 L23 24 L23 24 L19 20 L19 20 C18 19, 16 19, 15 20 C14 21, 14 22, 15 23 L22 29 L22 29 C23 30, 24 30, 25 29 L38 16 L38 16 C39 15, 39 14, 38 13 Z M-3 34 C-3 33, -3 32, -2 31 L-2 31 L-2 31 C-1 30, 0 29, 2 29 L3 29 L3 29 L3 42 L3 42 L49 42 L49 42 L49 29 L49 29 L50 29 L50 29 C52 29, 53 30, 54 31 C55 32, 55 33, 55 34 L55 44 L55 44 C55 45, 55 46, 54 47 C53 48, 52 49, 50 49 L2 49 L2 49 C0 49, -1 48, -2 47 C-3 46, -3 45, -3 44 L-3 34Z "/>
+        </svg>
+        <span>E-OKP</span></a></li>
+        <li role="menuitem"><a href="http://10.175.11.81:90/" target="_blank" class="nav-link"><svg class="icon" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg">
+           <path d="M33 10 L33 33 L33 10 L33 33 L0 33 L0 33 L0 10 L0 10 L33 10Z  M0 3 C-2 3, -3 4, -4 5 L-4 5 L-4 5 C-6 7, -6 8, -6 10 L-6 33 L-6 33 C-6 34, -6 36, -4 37 C-3 38, -2 39, 0 39 L12 39 L12 39 L11 42 L11 42 L3 42 L3 42 C2 42, 2 43, 1 43 C0 44, 0 45, 0 46 C0 47, 0 47, 1 48 C2 49, 2 49, 3 49 L29 49 L29 49 C30 49, 31 49, 32 48 C32 47, 33 47, 33 46 C33 45, 32 44, 32 43 C31 43, 30 42, 29 42 L22 42 L22 42 L21 39 L21 39 L33 39 L33 39 C34 39, 36 38, 37 37 C38 36, 39 34, 39 33 L39 10 L39 10 C39 8, 38 7, 37 5 C36 4, 34 3, 33 3 L0 3Z  M47 3 C46 3, 45 4, 44 5 L44 5 L44 5 C43 6, 42 7, 42 8 L42 44 L42 44 C42 45, 43 46, 44 47 C45 48, 46 49, 47 49 L54 49 L54 49 C55 49, 56 48, 57 47 C58 46, 59 45, 59 44 L59 8 L59 8 C59 7, 58 6, 57 5 C56 4, 55 3, 54 3 L47 3Z  M49 10 L52 10 L49 10 L52 10 C53 10, 54 10, 54 11 C54 13, 53 13, 52 13 L49 13 L49 13 C48 13, 47 13, 47 11 C47 10, 48 10, 49 10 Z M47 18 C47 17, 48 16, 49 16 L52 16 L52 16 C53 16, 54 17, 54 18 C54 19, 53 20, 52 20 L49 20 L49 20 C48 20, 47 19, 47 18 Z M51 34 C51 34, 52 35, 53 35 L53 35 L53 35 C53 36, 54 37, 54 37 C54 38, 53 39, 53 40 C52 40, 51 41, 51 41 C50 41, 49 40, 48 40 C48 39, 47 38, 47 37 C47 37, 48 36, 48 35 C49 35, 50 34, 51 34"/>
+        </svg>
+        <span>PORTAL</span></a></li>
+        </ul>
+        </div>
+        </div>
 <!-- Log Book Proses -->
- <H2 style="color: aquamarine; position:absolute;top: 17%;margin-left: -10%;">Log Book Proses</H2><br>
+ <h1 style="position: absolute;left:850px;top:-100px;color:brown;">Log Book Packing</h1>
     <div class="log-1">
         <a href="https://onekn-my.sharepoint.com/:x:/g/personal/septian_priatna_kalbenutritionals_com/EcTMbrcEgIpMrbHqiZCzFIQBl_65zG99CaRzzm4DybLvtg?e=t9rVR3" target="_blank"><button class="button2"><b>SLI LINE A</b></button></a>
         <a href="https://onekn-my.sharepoint.com/:x:/g/personal/septian_priatna_kalbenutritionals_com/ESa_CIe_gslFuHXxHfKAs68BOBKiKXd99g0_d-35LyzKHg?e=DXI8U3" target="_blank"><button class="button2"><b>CLI LINE B</b></button></a>
@@ -21,16 +77,10 @@
         <a href="https://onekn-my.sharepoint.com/:x:/g/personal/septian_priatna_kalbenutritionals_com/Ecvm0edpB79CtfJ9ObHAddEB3i7be-BWasx5p9j9jLVK1g?e=igLIyx" target="_blank"><button class="button2"><b>Label Sampel</b></button></a>
         <a href="https://onekn-my.sharepoint.com/:x:/g/personal/septian_priatna_kalbenutritionals_com/ERqNhRcIaulDiWhokfMW6yEBhCwtB69_p-HWcwC7xUDxnw?e=OAXr63" target="_blank"><button class="button2"><b>Input All Data QC Packing</b></button></a>
         <a href="https://onekn-my.sharepoint.com/:x:/g/personal/septian_priatna_kalbenutritionals_com/ERjOJUyQd3tKr8AJNROxzaoB20iELotOtaZ9Gxyg07mLHw?e=pKh1Gi" target="_blank"><button class="button2"><b>PICAPA</b></button></a>
-        <a href="https://docs.google.com/spreadsheets/d/1flsYs7962sXu1qVsDDNioEILUagIscEWFfkXOwuquA0/edit?gid=1205767417#gid=1205767417" target="_blank"><button class="button2"><b>Absen QA</b></button></a>
         <a href="https://onekn-my.sharepoint.com/:f:/g/personal/septian_priatna_kalbenutritionals_com/ErqyjCADv95IrdsMOQcj94UBIkju9UCB0tXaFwUY1QMTIQ?e=zXn1H9" target="_blank"><button class="button2"><b>Matriks Flushing</b></button></a>
         <a href="https://docs.google.com/spreadsheets/d/1_SL6yZUuikZDL4tXuMMpq_Noo80Wqn69/edit?gid=364501510#gid=364501510" target="_blank"><button class="button2"><b>Form Flushing</b></button></a>
         <a href="https://onekn-my.sharepoint.com/:x:/g/personal/septian_priatna_kalbenutritionals_com/Ed6h1CBU6Z9Du3Ym3Q8wNM8BWh8ERU7Ic4EgntoKA24TKQ?e=UcI7PM" target="_blank"><button class="button2"><b>Monitoring Flushing</b></button></a>
-        <a href="https://docs.google.com/spreadsheets/d/1ANSGmJxgVNpw7_tqN8TJsT1WR6aFeoGz/edit?usp=drivesdk&ouid=114061069227598456740&rtpof=true&sd=true" target="_blank"><button class="button2"><b>Jadwal Produksi</b></button></a>
-        <a href="https://onekn-my.sharepoint.com/:f:/g/personal/septian_priatna_kalbenutritionals_com/EgP8VovnCZhHn_MKN-NY0zABkpuE5GXR9wlvUpPPhqQpHg" target="_blank"><button class="button2"><b>OneDrive Data Inline</b></button></a>
-        <a href="https://drive.google.com/drive/folders/1D0OuaG50_AYmqJZ1q9acArde4B_YhEo0" target="_blank"><button class="button2"><b>Google Drive Data Inline</b></button></a>
-        <a href="http://10.175.13.146/rois" target="_blank"><button class="button2"><b>ROIS</b></button></a>
         <a href="https://onekn-my.sharepoint.com/:x:/g/personal/septian_priatna_kalbenutritionals_com/EVpOqh4buQ5Pg4OCYzM9gUUBF4efDbUPoJZ4-WTcXzyAkA?e=dmTSta" target="_blank"><button class="button2"><b>KODE REPACK</b></button></a>
-        <a href="http://10.175.11.56/sso/e-okp/auth/login" target="_blank"><button class="button2"><b>E-OKP</b></button></a>
         <a href="https://onekn-my.sharepoint.com/:x:/g/personal/septian_priatna_kalbenutritionals_com/EbAg1rL8zk5NvB5sZrQrvyABh23Y8ORT2iR8yA-SokfIKA?e=W2TmIv" target="_blank"><button class="button2"><b>PEMBUATAN KODE</b></button></a>
     </div>
 </body>

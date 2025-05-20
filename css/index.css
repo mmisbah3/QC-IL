@@ -1,0 +1,144 @@
+
+#wb_PanelMenu1 a, #PanelMenu1_markup li a
+{
+   display: block;
+   text-align: left;
+   vertical-align: middle;
+}
+#PanelMenu1_markup
+{
+   display: none;
+   margin: 0;
+   padding: 0;
+}
+#PanelMenu1_panel #PanelMenu1_markup
+{
+   display: block;
+}
+#PanelMenu1_markup ul
+{
+   list-style:none;
+   list-style-type:none;
+   margin: 10;
+   padding: 0;
+}
+#PanelMenu1_markup li a, #PanelMenu1_markup li a:hover
+{
+   padding: 10px 10px 10px 10px;
+   box-shadow: none;
+}
+#PanelMenu1_markup .divider
+{
+   height: 1px;
+   margin: 9px 0;
+   overflow: hidden;
+   background-color: #0D6EFD;
+}
+#PanelMenu1_panel
+{
+   display: none;
+   position: fixed;
+   top: 0;
+   height: 100%;
+   width: 250px;
+   z-index: 9999;
+}
+#PanelMenu1_markup li a
+{
+   color: #FFFFFF;
+   border: 0px solid #0D6EFD;
+   background-color: rgba(25,25,112,0.57);
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   font-style: normal;
+   text-decoration: none;
+   text-transform: none;
+}
+#wb_PanelMenu1 a
+{
+   color: #FFFFFF;
+   border: 1px solid #0D6EFD;
+   border-radius: 0px;
+   background-color: #191970;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   font-style: normal;
+   text-decoration: none;
+   text-align: center;
+   text-transform: none;
+}
+#PanelMenu1_markup li a
+{
+   background-color: transparent;
+}
+#PanelMenu1_markup li a:hover
+{
+   color: #FFFFFF;
+   background-color: #0B5ED7;
+   border: 0px solid #0A58CA;
+}
+#PanelMenu1_markup li a .icon
+{
+   fill: currentColor;
+   width: 16px;
+   height: 16px;
+   vertical-align: middle;
+}
+#PanelMenu1_markup li a:hover .icon
+{
+   fill: currentColor;
+}
+#PanelMenu1 .button-icon
+{
+   fill: currentColor;
+}
+#PanelMenu1:hover .button-icon
+{
+   fill: currentColor;
+}
+#wb_PanelMenu1 a:hover
+{
+   color: #FFFFFF;
+   background-color: #0B5ED7;
+   border: 1px solid #0A58CA;
+}
+#PanelMenu1_panel
+{
+   background-color: rgba(25,25,112,0.57);
+   overflow-y: auto;
+}
+#PanelMenu1 .line
+{
+   width: 16px;
+   height: 3px;
+   background: #FFFFFF;
+   display: block;
+   margin: 3px auto;
+   transition: all 0.3s ease-in-out;
+}
+#PanelMenu1 .line:first-child
+{
+   margin-top: 12px;
+}
+#PanelMenu1.open .line:nth-child(1)
+{
+   transform: translateY(6px) rotate(45deg);
+}
+#PanelMenu1.open .line:nth-child(2)
+{
+   opacity: 0;
+}
+#PanelMenu1.open .line:nth-child(3)
+{
+   transform: translateY(-6px) rotate(-45deg);
+}
+#PanelMenu1
+{
+   line-height: 40px;
+   width: 42px;
+   height: 40px;
+   position: absolute;
+   z-index: 999;
+}
