@@ -92,6 +92,26 @@
         
     </div>
 
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script>
+      // TODO: Ganti dengan konfigurasi proyek Firebase Anda
+      const firebaseConfig = {
+        apiKey: "AIzaSyBEUND6sFPoXiEPMWY5gfM5c52EmfLmhHw",
+        authDomain: "inline-2ab61.firebaseapp.com",
+        // Pastikan Anda menambahkan databaseURL untuk Realtime Database
+        databaseURL: "https://inline-2ab61-default-rtdb.firebaseio.com",
+        projectId: "inline-2ab61",
+        storageBucket: "inline-2ab61.firebasestorage.app",
+        messagingSenderId: "325053062497",
+        appId: "1:325053062497:web:ffcf97f43564d68450b920"
+      };
+
+      // Inisialisasi Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
     <!-- Notepad Popup -->
     <div id="notepad-container">
         <div id="notepad-header">

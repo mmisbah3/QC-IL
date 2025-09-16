@@ -4,9 +4,33 @@ $(document).ready(function() {
     const notepadContent = $('#notepad-content');
     const toggleButton = $('#notepad-toggle');
 
-    if (localStorage.getItem('notepadContent')) {
-        notepadContent.html(localStorage.getItem('notepadContent'));
+    // --- START: Firebase Integration ---
+    const noteRef = firebase.database().ref('notes/packing_page_note');
+    let saveTimeout;
+
+    // Fungsi untuk menyimpan catatan ke Firebase dengan jeda (debouncing)
+    function saveNoteToFirebase() {
+        clearTimeout(saveTimeout);
+        saveTimeout = setTimeout(() => {
+            const content = notepadContent.html();
+            noteRef.set(content)
+                .catch((error) => {
+                    console.error("Gagal menyimpan catatan:", error);
+                    alert("Gagal menyimpan catatan ke server.");
+                });
+        }, 1500); // Jeda 1.5 detik setelah berhenti mengetik
     }
+
+    // Muat catatan dari Firebase saat halaman dibuka dan sinkronkan
+    noteRef.on('value', (snapshot) => {
+        const data = snapshot.val();
+        if (data && notepadContent.html() !== data) {
+            notepadContent.html(data);
+        }
+    }, (errorObject) => {
+        console.error("Gagal membaca data dari server: ", errorObject);
+    });
+    // --- END: Firebase Integration ---
 
     // Muat ukuran yang tersimpan dari localStorage
     if (localStorage.getItem('notepadWidth') && localStorage.getItem('notepadHeight')) {
@@ -33,9 +57,7 @@ $(document).ready(function() {
     }
 
     // Simpan catatan ke localStorage saat ada input
-    notepadContent.on('input', function() {
-        localStorage.setItem('notepadContent', $(this).html());
-    });
+    notepadContent.on('input', saveNoteToFirebase);
 
     // Toggle (minimize/maximize) notepad
     notepadHeader.on('click', function(e) {
