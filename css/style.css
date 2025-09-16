@@ -90,7 +90,7 @@ body {
     font-family: 'Comic Sans MS', cursive, sans-serif; /* A more 'handwritten' font */
     transition: all 0.2s ease-in-out;
     /* Ukuran default, bisa ditimpa oleh JS/localStorage */
-    width: 300px; 
+    width: 1300px; 
     height: 250px;
     display: flex;
     flex-direction: column;
