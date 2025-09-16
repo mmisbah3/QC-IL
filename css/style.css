@@ -76,3 +76,83 @@ body {
 .log-1{
     margin-left: 5%;
 }
+
+/* Notepad styles */
+#notepad-container {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background-color: #ffeb3b; /* Yellow sticky note color */
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1001;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* A more 'handwritten' font */
+    transition: all 0.2s ease-in-out;
+    /* Ukuran default, bisa ditimpa oleh JS/localStorage */
+    width: 300px; 
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+#notepad-header {
+    padding: 5px 10px;
+    background-color: #fdd835; /* Darker yellow for header */
+    cursor: move;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#notepad-header span {
+    font-weight: bold;
+}
+
+#notepad-toggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#notepad-content {
+    padding: 10px;
+    overflow-y: auto;
+    outline: none;
+    background-color: #fffde7; /* Lighter yellow for content */
+    flex-grow: 1; /* Biarkan konten mengisi ruang yang tersedia */
+    resize: none; /* Nonaktifkan handle resize bawaan */
+}
+
+/* Styles for the minimized circular state */
+#notepad-container.minimized {
+    width: 60px !important; /* Override inline style from resizing */
+    height: 60px !important; /* Override inline style from resizing */
+    border-radius: 50%;
+    bottom: 20px !important; /* Override inline style from dragging */
+    left: 20px !important; /* Override inline style from dragging */
+    top: auto !important;
+    right: auto !important;
+    overflow: hidden;
+    background-color: #fdd835;
+}
+
+#notepad-container.minimized #notepad-header {
+    padding: 0;
+    height: 100%;
+    cursor: pointer;
+    border-bottom: none;
+    justify-content: center;
+}
+
+#notepad-container.minimized #notepad-header span {
+    display: none;
+}
+
+#notepad-container.minimized #notepad-content {
+    display: none;
+}
