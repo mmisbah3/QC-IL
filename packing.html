@@ -11,6 +11,8 @@
     <link href="css/index.css" rel="stylesheet">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/wb.panel.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script>
         $(document).ready(function()
         {
@@ -19,8 +21,6 @@
     </script>
 </head>
 <body style="background-image: url(assets/bg.jpg);background-size: cover;">
-    <div id="datetime" style="position: absolute;top:-380px"></div>
-    <script src="js/clock.js"></script>
 
     <div id="wb_PanelMenu1" style="position:absolute;left:20px;top:10px;width:42px;height:40px;text-align:center;z-index:0;">
         <a href="#PanelMenu1_markup" id="PanelMenu1">
@@ -91,5 +91,18 @@
         <a href="http://10.175.12.99:3000/d/2b5a84b4-9e5d-4631-b337-b109feb06ddb/visitor-dasboard?orgId=1&from=now-5m&to=now&timezone=Asia%2FJakarta&refresh=5s&kiosk" target="_blank"><button class="button2"><b>DASHBOARD PRD</b></button></a>
         
     </div>
+
+    <!-- Notepad Popup -->
+    <div id="notepad-container">
+        <div id="notepad-header">
+            <span>Catatan</span>
+            <button id="notepad-toggle">-</button>
+        </div>
+        <div id="notepad-content" contenteditable="true">
+            Ketik catatanmu di sini...
+        </div>
+    </div>
+
+    <script src="js/notepad.js"></script>
 </body>
 </html>
