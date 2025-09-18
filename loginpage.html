@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log In Page</title>
+  <!-- Pastikan path ke CSS dan JS sudah benar -->
+  <link rel="stylesheet" href="/css/styleadmin.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="/js/scriptadmin.js"></script>
+</head> 
+<body>
+
+  <div class="container">
+
+    <div class="theme-toggle-wrapper">
+      <button class="theme-btn" id="themeToggle">
+        <i class="fas fa-sun"></i>
+      </button>
+    </div>
+
+    <div class="form-toggle">
+      <button id="showLoginBtn" class="active">Login</button>
+      <button id="showSignupBtn">Sign Up</button>
+    </div>
+
+
+    <form class="form-box" id="loginForm">
+      <h2>Login</h2>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="loginEmail" required />
+        <label>Email</label>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="loginPassword" required />
+        <label>Password</label>
+        <i class="fas fa-eye toggle-password"></i>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <div class="social-buttons">
+        <div class='code-block code-block-2' style='margin: 8px 0; clear: both;'>
+<template id="pAOCScNtNz2gi3JA4v9J"></template>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2094722033678002"
+     data-ad-slot="2248279416"></ins>
+<script type="bv_inline_delayed_js" bv_unique_id="It4hwq6RjSmYv3jGwakS" defer="1" data-cfasync="" bv_inline_delayed="1" async="">(adsbygoogle = window.adsbygoogle || []).push({});</script></div>
+<p>Or continue with:</p>
+        <div class="icons">
+          <a class="facebook"><i class="fab fa-facebook-f"></i></a>
+          <a class="google" id="googleLoginBtn"><i class="fab fa-google"></i></a>
+          <a class="github"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </form>
+
+
+    <form class="form-box hidden" id="signupForm">
+      <h2>Sign Up</h2>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="signupName" required autocomplete="name" />
+        <label>Name</label>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="signupEmail" required autocomplete="email" />
+        <label>Email</label>
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="signupPassword" required autocomplete="new-password" />
+        <label>Password</label>
+        <i class="fas fa-eye toggle-password"></i>
+      </div>
+      <button type="submit" class="btn">Register</button>
+      <div class="social-buttons">
+        <p>Or continue with:</p>
+        <div class="icons">
+          <a class="facebook"><i class="fab fa-facebook-f"></i></a>
+          <a class="google" id="googleSignupBtn"><i class="fab fa-google"></i></a>
+          <a class="github"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <template id="lrWrDO38wIEJKpUZXjLx"></template>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
+</body>
+</html>

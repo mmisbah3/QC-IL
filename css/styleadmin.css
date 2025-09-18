@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #e0e5ec;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+/* Theme Toggle */
+.theme-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: -5px;
+}
+
+.theme-btn {
+  background: #e0e5ec;
+  border: none;
+  padding: 10px;
+  border-radius: 100%;
+  box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #333;
+  font-size: 18px;
+}
+
+.theme-btn:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .theme-btn {
+  background: #2a2d32;
+  color: #eee;
+  box-shadow: inset 3px 3px 6px #1c1e21, inset -3px -3px 6px #3c4149;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 420px;
+  height: 600px;
+  background: #e0e5ec;
+  padding: 20px 30px 30px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px #bebebe, -10px -10px 30px #ffffff;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+/* Form Toggle Buttons */
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.form-toggle button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  background: #e0e5ec;
+  color: #444;
+  border-radius: 20px;
+  margin: 0 5px;
+  box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-toggle button.active {
+  color: #fff;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  box-shadow: none;
+}
+
+/* Form Boxes */
+.form-box {
+  padding-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-box.hidden {
+  display: none;
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input Groups */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 45px 12px 40px;
+  border: none;
+  border-radius: 12px;
+  background: #e0e5ec;
+  box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+  color: #333;
+}
+
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 40px;
+  color: #777;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -10px;
+  left: 35px;
+  font-size: 12px;
+  background: #e0e5ec;
+  padding: 0 5px;
+  color: #333;
+  border-radius: 3px;
+  border: 1px solid #333;
+}
+
+/* Icons inside input */
+.input-group i.fa-envelope,
+.input-group i.fa-user,
+.input-group i.fa-lock {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #999;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  color: #999;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Social Buttons */
+.social-buttons {
+  margin-top: 20px;
+}
+
+.social-buttons p {
+  font-size: 14px;
+  color: #666;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.icons a {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  background: #e0e5ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #333;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+  transition: transform 0.3s;
+}
+
+.icons a:hover {
+  transform: scale(1.1);
+}
+
+.facebook { color: #3b5998; }
+.google   { color: #db4437; }
+.github   { color: #333; }
+
+/* Dark Mode Styles */
+body.dark {
+  background: #1a1c1f;
+}
+
+body.dark .container,
+body.dark .theme-toggle-wrapper {
+  background: #2a2d32;
+  color: white;
+  box-shadow: none;
+}
+
+body.dark .form-toggle button,
+body.dark .input-group input,
+body.dark .icons a {
+  background: #2a2d32;
+  color: #eee;
+  box-shadow: inset 5px 5px 10px #191b1d, inset -5px -5px 10px #3b3f45;
+}
+
+body.dark .form-toggle button.active {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  box-shadow: 0 0 10px rgba(0, 198, 255, 0.5);
+}
+
+body.dark .btn {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+body.dark .input-group label {
+  background: #2a2d32;
+  color: #eee;
+}
+
+body.dark .input-group input:focus + label,
+.input-group input:valid + label {
+  border: 1px solid #eee;
+}
+
+body.dark .form-box h2 {
+  color: #eee;
+}
+
+body.dark .toggle-password {
+  color: #bbb;
+}
